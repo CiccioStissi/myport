@@ -1,0 +1,430 @@
+/* Stili generali del corpo e del contenitore */
+body {
+    background-color: #0c0d1b; /* Blu navy molto scuro per lo sfondo principale */
+    color: #e0e6ed; /* Testo chiaro grigio-azzurro */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Stili per il titolo e i sottotitoli */
+h1, h2, h3, h4, h5, h6 {
+    color: #00d2ff; /* Ciano brillante per i titoli */
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.4rem;
+    color: #00d2ff;
+    font-weight: 400;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #8c98a6;
+    margin-top: 5px;
+}
+
+/* Stili del link di navigazione */
+.nav-menu {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-line {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #1a223f;
+    z-index: 1;
+}
+
+.nav-item {
+    color: #8c98a6;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #00d2ff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #00d2ff;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Stili per le sezioni */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #1a223f;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #00d2ff;
+}
+
+/* Stili specifici per il layout */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 0 60px;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.highlight {
+    color: #00d2ff;
+    font-weight: bold;
+}
+
+/* Stili per i tag delle skill */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 250px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag,
+.tech {
+    background-color: #1a223f;
+    color: #00d2ff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-tag:hover,
+.tech:hover {
+    background-color: #00d2ff;
+    color: #0c0d1b;
+    transform: translateY(-2px);
+}
+
+/* Stili per la timeline dell'esperienza */
+.experience-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #1a223f;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #00d2ff;
+    border-radius: 50%;
+    border: 2px solid #0c0d1b;
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    color: #8c98a6;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    color: #00d2ff;
+}
+
+.timeline-content p {
+    margin: 5px 0 10px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.timeline-content ul li::before {
+    content: '→';
+    margin-right: 10px;
+    color: #00d2ff;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Stili per le card dei progetti */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #11152a;
+    border: 1px solid #1a223f;
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.project-tech {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Stili per la sezione lingue */
+.languages-section {
+    padding: 40px 0;
+    border-top: 1px solid #1a223f;
+}
+
+.languages {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.language {
+    background-color: #11152a;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a223f;
+}
+
+.lang-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00d2ff;
+}
+
+.lang-level {
+    font-size: 0.9rem;
+    color: #8c98a6;
+    margin-top: 5px;
+}
+
+/* Stili per il footer */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #5c6773;
+    border-top: 1px solid #1a223f;
+}
+
+/* Stili per le sezioni Contatti e Download */
+.contact-download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-box,
+.download-box {
+    background-color: #11152a;
+    border: 1px solid #1a223f;
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover,
+.download-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 210, 255, 0.1);
+}
+
+.contact-box h3,
+.download-box h3 {
+    color: #00d2ff;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.futuristic-form input,
+.futuristic-form textarea {
+    background-color: #0c0d1b;
+    border: 1px solid #1a223f;
+    color: #e0e6ed;
+    padding: 12px;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.futuristic-form input:focus,
+.futuristic-form textarea:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+
+.futuristic-button {
+    background-color: #00d2ff;
+    color: #0c0d1b;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Aggiunto per i link */
+    text-align: center; /* Aggiunto per allineamento */
+}
+
+.futuristic-button:hover {
+    background-color: #00a4d4;
+    transform: translateY(-2px);
+}
+
+/* Media query per la responsività */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-right {
+        margin-top: 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-date {
+        margin-bottom: 10px;
+    }
+
+    .experience-timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
+
+    .experience-timeline {
+        padding-left: 20px;
+    }
+}
