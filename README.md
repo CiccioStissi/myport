@@ -1,2 +1,2 @@
 # myport
-Codice HTML e codice CSS per realizzare una semplice pagina web che funge da Portfolio personale. Potete cambiare tutte le informazioni al suo interno, i file vi torneranno utili per prendere spunto magari. Il file JS in realtà non serve nel mio caso specifico, ma potreste tenerlo in considerazione per il download del vostro curriculum.
+HTML and CSS code to create a simple web page that acts as a personal portfolio. You can change all the information within it; the files will be useful for inspiration. The JS file isn't actually needed in my specific case, but you might consider using it for downloading your resume.
